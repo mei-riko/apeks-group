@@ -4,12 +4,223 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Basic Page</title>
+    <title>apeks-group</title>
+    <link href="./css/slick.css" rel="stylesheet"/>
+    <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <header class="header header_fixed">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-5">
+            <div class="header__logo"></div>
+          </div>
+          <div class="col-xl-2 d-flex justify-content-center">
+            <div class="header__navbar-toggler"><span class="header__navbar-title">МЕНЮ</span>
+              <svg class="header__navbar-icon" width="32px" height="20px">
+                <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M-0.000,3.999 L-0.000,-0.001 L32.000,-0.001 L32.000,3.999 L-0.000,3.999 ZM24.000,12.000 L-0.000,12.000 L-0.000,7.999 L24.000,7.999 L24.000,12.000 ZM16.000,19.999 L-0.000,19.999 L-0.000,15.999 L16.000,15.999 L16.000,19.999 Z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="col-xl-5">
+            <div class="header__contact"><a class="header__contact-phone" href="tel:88006665544">8 (800) 666-55-44</a><a class="header__contact-modal" href="#">Связаться с менеджером компании</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar d-none">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link">Тест 1</a></li>
+        <li class="navbar-item"><a class="navbar-link">Тест 2</a></li>
+        <li class="navbar-item"><a class="navbar-link">Тест 3</a></li>
+        <li class="navbar-item"><a class="navbar-link">Тест 4</a></li>
+      </ul>
+    </nav>
+    <main>
+      <header class="main-screen">
+        <div class="container">
+          <div class="row justify-content-end align-items-end">
+            <div class="col-xl-5">
+              <h1 class="heading">Eget mi proin sed libero enim sed faucibus turpis&nbsp;in</h1>
+            </div>
+            <div class="col-xl-5">
+              <p class="offer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus quam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container container_services">
+          <div class="row justify-content-end">
+            <div class="col-xl-10 services"><a class="services__item" href="#" style="background-image:url('/img/demo-01.png')">
+                <div class="services__title"><span class="text-bold">Строительство </span>промышленное 
+                  и гражданское
+                </div></a><a class="services__item" href="#" style="background-image:url('/img/demo-02.png')">
+                <div class="services__title"><span class="text-bold">Производство  </span>строительных 
+                  материалов
+                </div></a><a class="services__item" href="#" style="background-image:url('/img/demo-03.png')">
+                <div class="services__title"><span class="text-bold">Инвестирование  </span>в девелоперские 
+                  проекты
+                </div></a></div>
+          </div>
+        </div>
+      </header>
+      <section class="content content_history">
+        <div class="container">
+          <p class="subheading">История компании</p>
+          <div class="row">
+            <div class="col-xl-7">
+              <h2 class="heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+            </div>
+            <div class="col-xl-6">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col-xl-6">
+              <div class="stats">
+                <div class="stats-item"> 
+                  <div class="stats-item__title icon-company">Компания на рынке</div>
+                  <div class="stats-item__count">
+                    <div class="active" style="width: 30%;"></div>
+                    <div class="title" style="transform: translateX(66px) translateY(-40px);">30 лет</div>
+                  </div>
+                </div>
+                <div class="stats-item"> 
+                  <div class="stats-item__title icon-graph">Доходность за год</div>
+                  <div class="stats-item__count">
+                    <div class="active" style="width: 70%;"></div>
+                    <div class="title" style="transform: translateX(160px) translateY(-40px);">8,5 млн. руб.</div>
+                  </div>
+                </div>
+                <div class="stats-item"> 
+                  <div class="stats-item__title icon-case">Сотрудников в штате</div>
+                  <div class="stats-item__count">
+                    <div class="active" style="width: 50%;"></div>
+                    <div class="title" style="transform: translateX(96px) translateY(-40px);">1 500 человек</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content content_person">
+        <div class="container">
+          <p class="subheading">Руководство компании</p>
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="col-xl-5"><img class="content_person__image" src="/img/pic-01.png"/></div>
+                <div class="col-xl-7">
+                  <p class="content_person__name">Владимир Семенович</p>
+                  <p class="content_person__surname">Клименко</p>
+                  <p class="content_person__position">председатель Совета директоров</p>
+                  <p class="content_person__desc">Sit amet consectetur adipiscing elit ut. Aliquam sem fringilla ut morbi tincidunt. Elit ut aliquam purus sit amet luctus venenatis lectus magna. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. In est ante in nibh mauris cursus mattis. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="col-xl-5"><img class="content_person__image" src="/img/pic-02.png"/></div>
+                <div class="col-xl-7">
+                  <p class="content_person__name">Владимир Семенович</p>
+                  <p class="content_person__surname">Клименко</p>
+                  <p class="content_person__position">генеральный директор</p>
+                  <p class="content_person__desc">Sit amet consectetur adipiscing elit ut. Aliquam sem fringilla ut morbi tincidunt. Elit ut aliquam purus sit amet luctus venenatis lectus magna. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. In est ante in nibh mauris cursus mattis. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content content_service">
+        <div class="container">
+          <p class="subheading">Основные виды деятельности</p>
+        </div>
+        <div class="container-fluid">
+          <div class="content_service__images" style="background-image: url('/img/services-demo-01.png')"></div>
+          <ul class="content_service__items row">
+            <li class="col-xl-4"><a class="content_service__link" href="#"><span class="number">01</span><span class="name">Промышленное строительство</span></a></li>
+            <li class="col-xl-4"><a class="content_service__link content_service__link--active" href="#"><span class="number">02</span><span class="name">Объекты транспортной инфраструктуры</span></a></li>
+            <li class="col-xl-4"><a class="content_service__link" href="#"><span class="number">03</span><span class="name">Общественные здания и сооружения</span></a></li>
+            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">04</span><span class="name">Объекты энергетики</span></a></li>
+            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">05</span><span class="name">Гражданское строительство</span></a></li>
+            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">06</span><span class="name">Метростроение</span></a></li>
+            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">07</span><span class="name">Объекты культурного наследия</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="content content_licences">
+        <div class="container">
+          <p class="subheading">Лицензии и СРО</p>
+          <div class="licences">
+            <div class="licences__item"><img class="img-fluid licences__image" src="/img/licences-demo.png"/>
+              <div class="licences__content">
+                <p class="licences__title">СРО</p>
+                <p class="licences__subtitle">на проектирование</p>
+              </div>
+            </div>
+            <div class="licences__item"><img class="img-fluid licences__image" src="/img/licences-demo.png"/>
+              <div class="licences__content">
+                <p class="licences__title">СРО</p>
+                <p class="licences__subtitle">на проектирование</p>
+              </div>
+            </div>
+            <div class="licences__item active"><img class="img-fluid licences__image" src="/img/licences-demo.png"/>
+              <div class="licences__content">
+                <p class="licences__title">СРО</p>
+                <p class="licences__subtitle">на проектирование</p>
+              </div>
+            </div>
+            <div class="licences__item"><img class="img-fluid licences__image" src="/img/licences-demo.png"/>
+              <div class="licences__content">
+                <p class="licences__title">СРО</p>
+                <p class="licences__subtitle">на проектирование</p>
+              </div>
+            </div>
+            <div class="licences__item"><img class="img-fluid licences__image" src="/img/licences-demo.png"/>
+              <div class="licences__content">
+                <p class="licences__title">СРО</p>
+                <p class="licences__subtitle">на проектирование</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="project">
+        <div class="container">
+          <p class="subheading">Выполненные проекты</p>
+          <div class="row">
+            <div class="col-xl-4">
+              <div class="project__item"><a class="project__link" href="#">+</a><img class="img-fluid project__image" src="/img/portfolio-01.png"/>
+                <p class="project__theme">Транспортная инфраструктура</p>
+                <p class="project__title">Реконструкция автодороги А-121 к Константиновскому дворцу</p>
+                <p class="project__location">г. Санкт-Петербург</p>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="project__item"><a class="project__link" href="#">+</a><img class="img-fluid project__image" src="/img/portfolio-02.png"/>
+                <p class="project__theme">Промышленное строительство</p>
+                <p class="project__title">Комплекс гидрокрекинга</p>
+                <p class="project__location">г. Кириши</p>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="project__item"><a class="project__link" href="#">+</a><img class="img-fluid project__image" src="/img/portfolio-03.png"/>
+                <p class="project__theme">Общественные здания и сооружения</p>
+                <p class="project__title">Реконструкция здания ФедеральнойСлужбы Судебных Приставов</p>
+                <p class="project__location">г. Москва</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="maps"></div>
+    </main>
+    <footer class="footer"></footer>
     <script src="./js/jquery.inputmask.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

@@ -1,16 +1,173 @@
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Basic Page
-
-        link(href='./css/style.css', rel='stylesheet')
-
+    include chunks/head.pug
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
+        main
+            header.main-screen
+                .container
+                    .row.justify-content-end.align-items-end
+                        .col-xl-5
+                            h1.heading Eget mi proin sed libero enim sed faucibus turpis&nbsp;in
+                        .col-xl-5
+                            p.offer Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus quam.
+                .container.container_services
+                    .row.justify-content-end
+                        .col-xl-10.services
+                            a.services__item(href="#" style="background-image:url('/img/demo-01.png')")
+                                .services__title
+                                    span.text-bold Строительство 
+                                    | промышленное 
+                                    | и гражданское
+                            a.services__item(href="#" style="background-image:url('/img/demo-02.png')")
+                                .services__title
+                                    span.text-bold Производство  
+                                    | строительных 
+                                    | материалов
+                            a.services__item(href="#" style="background-image:url('/img/demo-03.png')")
+                                .services__title
+                                    span.text-bold Инвестирование  
+                                    | в девелоперские 
+                                    | проекты
+            section.content.content_history
+                .container
+                    p.subheading История компании
+                    .row
+                        .col-xl-7
+                            h2.heading Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        .col-xl-6
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        .col-xl-6
+                            .stats
+                                .stats-item 
+                                    .stats-item__title.icon-company Компания на рынке
+                                    .stats-item__count
+                                        .active(style="width: 30%;")
+                                        .title(style="transform: translateX(66px) translateY(-40px);") 30 лет
+                                .stats-item 
+                                    .stats-item__title.icon-graph Доходность за год
+                                    .stats-item__count
+                                        .active(style="width: 70%;")
+                                        .title(style="transform: translateX(160px) translateY(-40px);") 8,5 млн. руб.
+                                .stats-item 
+                                    .stats-item__title.icon-case Сотрудников в штате
+                                    .stats-item__count
+                                        .active(style="width: 50%;")
+                                        .title(style="transform: translateX(96px) translateY(-40px);") 1 500 человек
+            section.content.content_person
+                .container
+                    p.subheading Руководство компании
+                    .row
+                        .col-xl-6
+                            .row
+                                .col-xl-5
+                                    img.content_person__image(src="/img/pic-01.png")
+                                .col-xl-7
+                                    p.content_person__name Владимир Семенович
+                                    p.content_person__surname Клименко
+                                    p.content_person__position председатель Совета директоров
+                                    p.content_person__desc Sit amet consectetur adipiscing elit ut. Aliquam sem fringilla ut morbi tincidunt. Elit ut aliquam purus sit amet luctus venenatis lectus magna. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. In est ante in nibh mauris cursus mattis. 
+                        .col-xl-6
+                            .row
+                                .col-xl-5
+                                    img.content_person__image(src="/img/pic-02.png")
+                                .col-xl-7
+                                    p.content_person__name Владимир Семенович
+                                    p.content_person__surname Клименко
+                                    p.content_person__position генеральный директор
+                                    p.content_person__desc Sit amet consectetur adipiscing elit ut. Aliquam sem fringilla ut morbi tincidunt. Elit ut aliquam purus sit amet luctus venenatis lectus magna. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. In est ante in nibh mauris cursus mattis. 
+            section.content.content_service
+                .container
+                    p.subheading Основные виды деятельности
+                .container-fluid
+                    .content_service__images(style="background-image: url('/img/services-demo-01.png')")
 
+                    ul.content_service__items.row
+                        li.col-xl-4
+                            a.content_service__link(href="#")
+                                span.number 01
+                                span.name Промышленное строительство
+                        li.col-xl-4
+                            a.content_service__link.content_service__link--active(href="#")
+                                span.number 02
+                                span.name Объекты транспортной инфраструктуры
+                        li.col-xl-4
+                            a.content_service__link(href="#")
+                                span.number 03
+                                span.name Общественные здания и сооружения
+                        li.col-xl-3
+                            a.content_service__link(href="#")
+                                span.number 04
+                                span.name Объекты энергетики
+                        li.col-xl-3
+                            a.content_service__link(href="#")
+                                span.number 05
+                                span.name Гражданское строительство
+                        li.col-xl-3
+                            a.content_service__link(href="#")
+                                span.number 06
+                                span.name Метростроение
+                        li.col-xl-3
+                            a.content_service__link(href="#")
+                                span.number 07
+                                span.name Объекты культурного наследия
+            section.content.content_licences
+                .container
+                    p.subheading Лицензии и СРО
+                    .licences
+                        .licences__item
+                            img.img-fluid.licences__image(src="/img/licences-demo.png")
+                            .licences__content
+                                p.licences__title СРО
+                                p.licences__subtitle на проектирование
+                        .licences__item
+                            img.img-fluid.licences__image(src="/img/licences-demo.png")
+                            .licences__content
+                                p.licences__title СРО
+                                p.licences__subtitle на проектирование
+                        .licences__item.active
+                            img.img-fluid.licences__image(src="/img/licences-demo.png")
+                            .licences__content
+                                p.licences__title СРО
+                                p.licences__subtitle на проектирование
+                        .licences__item
+                            img.img-fluid.licences__image(src="/img/licences-demo.png")
+                            .licences__content
+                                p.licences__title СРО
+                                p.licences__subtitle на проектирование
+                        .licences__item
+                            img.img-fluid.licences__image(src="/img/licences-demo.png")
+                            .licences__content
+                                p.licences__title СРО
+                                p.licences__subtitle на проектирование
+            .project
+                .container
+                    p.subheading Выполненные проекты
+                    .row
+                        .col-xl-4
+                            .project__item
+                                a.project__link(href="#") +
+                                img.img-fluid.project__image(src="/img/portfolio-01.png")
+                                p.project__theme Транспортная инфраструктура
+                                p.project__title Реконструкция автодороги А-121 к Константиновскому дворцу
+                                p.project__location г. Санкт-Петербург
+                        .col-xl-4
+                            .project__item
+                                a.project__link(href="#") +
+                                img.img-fluid.project__image(src="/img/portfolio-02.png")
+                                p.project__theme Промышленное строительство
+                                p.project__title Комплекс гидрокрекинга
+                                p.project__location г. Кириши
+                        .col-xl-4
+                            .project__item
+                                a.project__link(href="#") +
+                                img.img-fluid.project__image(src="/img/portfolio-03.png")
+                                p.project__theme Общественные здания и сооружения
+                                p.project__title Реконструкция здания ФедеральнойСлужбы Судебных Приставов
+                                p.project__location г. Москва
+            .maps
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
         script(src="./js/app.min.js")

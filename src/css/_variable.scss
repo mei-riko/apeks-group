@@ -1,5 +1,6 @@
 $white:                     #ffffff;
 $black:                     #000000;
+$green:                     #329d49;
 
 
 $link-color:                #153e4c !default;
@@ -8,7 +9,7 @@ $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           30px !default;
+$grid-gutter-width:           40px !default;
 
 $grid-breakpoints: (
   xs: 0,
@@ -26,9 +27,9 @@ $container-max-widths: (
 ) !default;
 
 $body-color:                #343434;
-$body-bg:                   #fafafa;
+$body-bg:                   #fff;
 
-$font-family-base:            "Open Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base:            "Montserrat", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 
@@ -61,7 +62,7 @@ $headings-font-weight:          500 !default;
 $headings-line-height:          1.2 !default;
 $headings-color:                null !default;
 
-$paragraph-margin-bottom:       40px !default;
+$paragraph-margin-bottom:       20px !default;
 
 $table-cell-padding:            10px !default;
 $table-cell-padding-sm:         6px !default;

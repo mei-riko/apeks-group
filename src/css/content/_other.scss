@@ -1,0 +1,35 @@
+.content{
+    position: relative;
+    padding: 60px 0;
+
+
+}
+.subheading{
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    margin-bottom: 45px;
+
+    &:after{
+        position: absolute;
+        z-index: -1;
+
+        display: block;
+        content: '';
+        width: 180px;
+        height: 10px;
+
+        border-radius: 5px;
+        background: rgba(35, 136, 24, 0.2);
+        transform: translateY(-10px);
+    }
+}
+.heading{
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2em;
+
+    margin-bottom: 45px;
+}

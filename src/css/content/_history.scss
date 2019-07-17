@@ -1,0 +1,56 @@
+.content_history{}
+.stats{
+    &-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__title{
+            font-size: 12px;
+            line-height: 1rem;
+            padding: 6px 0 6px 2rem;
+            &.icon-company{background-size: 12px;}
+            &.icon-graph{background-size: 12px;}
+            &.icon-case{background-size: 12px;}
+        }
+        &__count{
+            position: relative;
+            width: 300px;
+            max-width: 100%;
+            height: 10px;
+            
+            border-radius: 5px;
+            background: rgba(35, 136, 24, 0.2);
+
+            .active{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                background: $green;
+                height: 100%;
+                border-radius: 5px;
+            }
+            .title{
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-bottom: 10px;
+                background: url("/img/arrow.svg") no-repeat center bottom / 8px;
+            }
+        }
+
+        & + .stats-item{
+            margin-top: 40px;
+        }
+    }
+}
+
+.icon-company{
+    background: url("/img/calendar.svg") no-repeat left center / contain;
+}
+.icon-graph{
+    background: url("/img/rising-bar.svg") no-repeat left center / contain;
+}
+.icon-case{
+    background: url("/img/portfolio.svg") no-repeat left center / contain;
+}

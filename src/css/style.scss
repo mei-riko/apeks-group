@@ -14,8 +14,10 @@
 
 @import "reboot.scss";
 
+@import "other/header.scss";
+
 html,body {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
@@ -40,8 +42,10 @@ h4{font-size: 1.5rem;}
 h5{font-size: 1.25rem;}
 h6{font-size: 1rem;}
 p {
-    margin-top: 0;
-    margin-bottom: 1.25rem;
+    margin: 0;
+    & + *{
+        margin-top: 1.25rem;
+    }
 }
 ul{
     padding: 0;
@@ -82,3 +86,10 @@ small,
     margin: 0 auto;
     max-width: 100%;
 }
+
+@import "index.scss";
+@import "content/other.scss";
+@import "content/history.scss";
+@import "content/person.scss";
+@import "content/licences.scss";
+@import "content/service.scss";

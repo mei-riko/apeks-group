@@ -1,0 +1,15 @@
+.content_person{
+    &__name{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    &__surname{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 0;
+    }
+    &__position{
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
