@@ -87,9 +87,19 @@ small,
     max-width: 100%;
 }
 
+.slider-nav{
+    overflow: hidden;
+}
+.slick-slide{
+    height: auto;
+}
+
 @import "index.scss";
+
 @import "content/other.scss";
 @import "content/history.scss";
 @import "content/person.scss";
 @import "content/licences.scss";
 @import "content/service.scss";
+
+@import "block/project.scss";

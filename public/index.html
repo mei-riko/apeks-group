@@ -40,27 +40,27 @@
       </ul>
     </nav>
     <main>
-      <header class="main-screen">
+      <header class="section-main">
         <div class="container">
           <div class="row justify-content-end align-items-end">
-            <div class="col-xl-5">
+            <div class="col-xl-6">
               <h1 class="heading">Eget mi proin sed libero enim sed faucibus turpis&nbsp;in</h1>
             </div>
-            <div class="col-xl-5">
+            <div class="col-xl-6">
               <p class="offer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus quam.</p>
             </div>
           </div>
         </div>
         <div class="container container_services">
           <div class="row justify-content-end">
-            <div class="col-xl-10 services"><a class="services__item" href="#" style="background-image:url('/img/demo-01.png')">
-                <div class="services__title"><span class="text-bold">Строительство </span>промышленное 
+            <div class="col-xl-10 section-main__services"><a class="section-main__services__item" href="#" style="background-image:url('/img/demo-01.png')">
+                <div class="section-main__services__title"><span class="text-bold">Строительство </span>промышленное 
                   и гражданское
-                </div></a><a class="services__item" href="#" style="background-image:url('/img/demo-02.png')">
-                <div class="services__title"><span class="text-bold">Производство  </span>строительных 
+                </div></a><a class="section-main__services__item" href="#" style="background-image:url('/img/demo-02.png')">
+                <div class="section-main__services__title"><span class="text-bold">Производство  </span>строительных 
                   материалов
-                </div></a><a class="services__item" href="#" style="background-image:url('/img/demo-03.png')">
-                <div class="services__title"><span class="text-bold">Инвестирование  </span>в девелоперские 
+                </div></a><a class="section-main__services__item" href="#" style="background-image:url('/img/demo-03.png')">
+                <div class="section-main__services__title"><span class="text-bold">Инвестирование  </span>в девелоперские 
                   проекты
                 </div></a></div>
           </div>
@@ -138,17 +138,48 @@
         <div class="container">
           <p class="subheading">Основные виды деятельности</p>
         </div>
-        <div class="container-fluid">
-          <div class="content_service__images" style="background-image: url('/img/services-demo-01.png')"></div>
+        <div class="container-fluid p-0">
+          <div class="content_service__slider slider-for">
+            <div class="content_service__images" style="background-image: url('/img/services-demo-02.png')"></div>
+            <div class="content_service__images" style="background-image: url('/img/services-demo-01.png')"></div>
+            <div class="content_service__images" style="background-image: url('/img/services-demo-03.png')"></div>
+            <div class="content_service__images" style="background-image: url('/img/services-demo-04.png')"></div>
+            <div class="content_service__images" style="background-image: url('/img/services-demo-05.png')"></div>
+            <div class="content_service__images" style="background-image: url('/img/services-demo-06.png')"></div>
+            <div class="content_service__images" style="background-image: url('/img/services-demo-07.png')"></div>
+          </div>
           <ul class="content_service__items row">
-            <li class="col-xl-4"><a class="content_service__link" href="#"><span class="number">01</span><span class="name">Промышленное строительство</span></a></li>
-            <li class="col-xl-4"><a class="content_service__link content_service__link--active" href="#"><span class="number">02</span><span class="name">Объекты транспортной инфраструктуры</span></a></li>
-            <li class="col-xl-4"><a class="content_service__link" href="#"><span class="number">03</span><span class="name">Общественные здания и сооружения</span></a></li>
-            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">04</span><span class="name">Объекты энергетики</span></a></li>
-            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">05</span><span class="name">Гражданское строительство</span></a></li>
-            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">06</span><span class="name">Метростроение</span></a></li>
-            <li class="col-xl-3"><a class="content_service__link" href="#"><span class="number">07</span><span class="name">Объекты культурного наследия</span></a></li>
+            <li class="col col-xl-4">
+              <div class="content_service__link content_service__link--active" data-item="1"><span class="number">01</span><span class="name">Промышленное строительство</span></div>
+            </li>
+            <li class="col col-xl-4">
+              <div class="content_service__link" data-item="2"><span class="number">02</span><span class="name">Объекты транспортной инфраструктуры</span></div>
+            </li>
+            <li class="col col-xl-4">
+              <div class="content_service__link" data-item="3"><span class="number">03</span><span class="name">Общественные здания и сооружения</span></div>
+            </li>
+            <li class="col col-xl-3">
+              <div class="content_service__link" data-item="4"><span class="number">04</span><span class="name">Объекты энергетики</span></div>
+            </li>
+            <li class="col col-xl-3">
+              <div class="content_service__link" data-item="5"><span class="number">05</span><span class="name">Гражданское строительство</span></div>
+            </li>
+            <li class="col col-xl-3">
+              <div class="content_service__link" data-item="6"><span class="number">06</span><span class="name">Метростроение</span></div>
+            </li>
+            <li class="col col-xl-3">
+              <div class="content_service__link" data-item="7"><span class="number">07</span><span class="name">Объекты культурного наследия</span></div>
+            </li>
           </ul>
+          <div class="slider-nav d-none">
+            <div class="slider-item">1</div>
+            <div class="slider-item">2</div>
+            <div class="slider-item">3</div>
+            <div class="slider-item">4</div>
+            <div class="slider-item">5</div>
+            <div class="slider-item">6</div>
+            <div class="slider-item">7</div>
+          </div>
         </div>
       </section>
       <section class="content content_licences">
@@ -193,32 +224,70 @@
           <p class="subheading">Выполненные проекты</p>
           <div class="row">
             <div class="col-xl-4">
-              <div class="project__item"><a class="project__link" href="#">+</a><img class="img-fluid project__image" src="/img/portfolio-01.png"/>
+              <div class="project__item">
+                <div class="project__image"><a class="project__link" href="#">+</a><img class="img-fluid" src="/img/portfolio-01.png"/></div>
                 <p class="project__theme">Транспортная инфраструктура</p>
                 <p class="project__title">Реконструкция автодороги А-121 к Константиновскому дворцу</p>
                 <p class="project__location">г. Санкт-Петербург</p>
               </div>
             </div>
             <div class="col-xl-4">
-              <div class="project__item"><a class="project__link" href="#">+</a><img class="img-fluid project__image" src="/img/portfolio-02.png"/>
+              <div class="project__item">
+                <div class="project__image"><a class="project__link" href="#">+</a><img class="img-fluid" src="/img/portfolio-02.png"/></div>
                 <p class="project__theme">Промышленное строительство</p>
                 <p class="project__title">Комплекс гидрокрекинга</p>
                 <p class="project__location">г. Кириши</p>
               </div>
             </div>
             <div class="col-xl-4">
-              <div class="project__item"><a class="project__link" href="#">+</a><img class="img-fluid project__image" src="/img/portfolio-03.png"/>
-                <p class="project__theme">Общественные здания и сооружения</p>
-                <p class="project__title">Реконструкция здания ФедеральнойСлужбы Судебных Приставов</p>
+              <div class="project__item">
+                <div class="project__image"><a class="project__link" href="#">+</a><img class="img-fluid" src="/img/portfolio-03.png"/></div>
+                <p class="project__theme">Общественные здания и&nbsp;сооружения</p>
+                <p class="project__title">Реконструкция здания Федеральной Службы Судебных Приставов</p>
                 <p class="project__location">г. Москва</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="maps"></div>
+      <div class="section-maps" id="map"></div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3"><a class="footer__logo" href="/"></a></div>
+          <nav class="col-xl-3">
+            <ul class="footer__nav"> 
+              <li class="footer__item"><a class="footer__link" href="#">Услуги</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Каталог проектов</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Клиентам и инвесторам</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Поставщикам</a></li>
+            </ul>
+          </nav>
+          <div class="col-xl-2">
+            <ul class="footer__contact">
+              <li class="footer__contact__phone"><span class="footer__label">Телефон для связи</span><a class="footer__link" href="tel:880066655544">8 (800) 666-55-44</a></li>
+              <li class="footer__contact__email"><span class="footer__label">E-mail</span><a class="footer__link" href="mailto:info@apeksgroup.ru">info@apeksgroup.ru</a><a class="footer__link" href="mailto:info@apeksgroup.ru">sales@apeksgroup.ru</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-4">
+            <div class="footer__search">
+              <p class="footer__search__label">Поиск по сайту</p>
+              <input class="footer__search__input"/>
+            </div><a class="footer__policy" href="#">Политика конфеденциальности</a>
+          </div>
+        </div>
+        <div class="row footer__subline">
+          <div class="col-sm-6 text-left">
+            <p>© 2019. Все права защищены</p>
+          </div>
+          <div class="col-sm-6 text-right">
+            <p>Сайт разработан <a href="#">студией «SOHO»</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9101629a-d644-4cc4-aa18-4032c120fc8e&amp;lang=ru_RU"></script>
     <script src="./js/jquery.inputmask.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/app.min.js"></script>

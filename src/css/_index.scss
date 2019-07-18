@@ -1,10 +1,12 @@
-.main-screen{
+.section-main{
     position: relative;
     overflow: hidden;
     
     padding: 200px 0 0;
+    
     background: url("/img/bg-image-demo.jpg") no-repeat center / cover;
     color: $white;
+    
     &:before{
         content:'';
         display: block;
@@ -18,6 +20,8 @@
         transform: skewY(4deg);
         transform-origin: left;
     }
+
+    // Text
     .heading{
         margin-bottom: 0;
     }
@@ -25,32 +29,67 @@
         font-size: 1rem;
         line-height: 1.5em;
     }
-}
-.services{
-    display: flex;
-    padding: 0;
-    margin-right: -160px;
-
-    &__item{
+    // Inside Containers
+    .container_services{
+        margin-top: 100px;
+    }
+    // Inside Blocks
+    &__services{
         display: flex;
-        align-items: flex-end;
-        width: calc(100%/3);
-        min-height: 250px;
-    }
-    &__title{
-        text-transform: uppercase;
-        color: $white;
-        padding: 2rem;
-        width: 210px;
-        max-width: 100%;
+        padding: 0;
+        margin-right: -160px;
+    
+        &__item{
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            width: calc(100%/3);
+            min-height: 250px;
+    
+            &:before{
+                content:'';
+                display: block;
+                width: 100%;
+                height: 100%;
+    
+                position: absolute;
+                top: 0;
+                left: 0;
+    
+                background: $green;
+                opacity: 0;
+    
+                transition: .3s;
+            }
+            &:hover{
+                &:before{
+                    opacity: .2;
+                }
+            }
+        }
+        &__title{
+            text-transform: uppercase;
+            color: $white;
+            padding: 2rem;
+            width: 210px;
+            max-width: 100%;
+        }
     }
 }
-.container_services{
-    margin-top: 100px;
+.section-maps{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    [class*="ymaps-2"][class*="-ground-pane"] {
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+        /* Firefox 3.5+ */
+        -webkit-filter: grayscale(100%);
+        /* Chrome 19+ & Safari 6+ */
+    }
 }
 
 @media all and (max-width: 1600px ){
-    .services{
+    .section-main__services{
         padding: 0;
         margin-right: 0;
     }
