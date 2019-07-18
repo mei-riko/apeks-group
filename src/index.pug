@@ -1,6 +1,6 @@
 html(lang="ru")
     include chunks/head.pug
-    body
+    body.index
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
         main
@@ -159,7 +159,7 @@ html(lang="ru")
                 .container
                     p.subheading Выполненные проекты
                     .row
-                        .col-xl-4
+                        .col-md-4
                             .project__item
                                 .project__image
                                     a.project__link(href="#") +
@@ -167,7 +167,7 @@ html(lang="ru")
                                 p.project__theme Транспортная инфраструктура
                                 p.project__title Реконструкция автодороги А-121 к Константиновскому дворцу
                                 p.project__location г. Санкт-Петербург
-                        .col-xl-4
+                        .col-md-4
                             .project__item
                                 .project__image
                                     a.project__link(href="#") +
@@ -175,7 +175,7 @@ html(lang="ru")
                                 p.project__theme Промышленное строительство
                                 p.project__title Комплекс гидрокрекинга
                                 p.project__location г. Кириши
-                        .col-xl-4
+                        .col-md-4
                             .project__item
                                 .project__image
                                     a.project__link(href="#") +

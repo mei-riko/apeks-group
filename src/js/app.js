@@ -55,5 +55,7 @@ $(document).ready(() =>{
     //myMap.controls.add('smallZoomControl');
     // Добавляем метки на карту.
     myMap.geoObjects.add(myPlacemark1);
-    }
+    myMap.behaviors.disable('scrollZoom');
+
+  }
 });

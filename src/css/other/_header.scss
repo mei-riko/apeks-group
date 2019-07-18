@@ -1,31 +1,35 @@
 .header{
     padding: 60px 0;
-    // background: #2a4a36;
-
-    &_fixed{
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 11;
-    }
-
+    border-bottom:1px solid #e5e5e5;
     &__logo{
+        max-width: 100%;
         width: 280px;
         height: 70px;
-        background: url("/img/logo.png") no-repeat left center / contain;
+        background: url("/img/logo_dark.png") no-repeat left center / contain;
     }
     &__navbar-toggler{
         position: relative;
         cursor: pointer;
         display: flex;
-        align-items: center;    
+        align-items: center;  
+        &:hover{
+            .path{
+                fill:$green;
+            }
+        }  
+    }
+    &__navbar-icon{
+        .path{
+            fill:$dark;
+            transition: .3s;
+        }
+        
     }
     &__navbar-title{
-        color: $white;
+        color: $dark;
         font-size: 14px;
         line-height: 1em;
-        margin-right: .5em;
+        margin-right: 1em;
     }
     &__contact{
         text-align: right;
@@ -33,20 +37,56 @@
             font-size: 1.5rem;
             font-weight: 700;
             line-height: 1.2em;
-            color: $white;
+            color: $dark;
             &:hover{
-                color: $white;
+                color: $green;
             }
         }
         &-modal{
             font-size: 12px;
             line-height: 1em;
             margin-top: .5rem;
-            color: $white;
+            color: $dark;
             border-bottom: 1px dotted;
             &:hover{
-                color: $white;
+                color: $dark;
                 text-decoration: none;
+            }
+        }
+    }
+}
+
+.index{
+    .header_fixed{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        border-bottom: none;
+    }
+    .header{
+        &__logo{
+            background: url("/img/logo.png") no-repeat left center / contain;
+        }
+        &__navbar-icon{
+            .path{fill:$white;}
+        }
+        &__navbar-title{
+            color: $white;
+        }
+        &__contact{
+            &-phone{
+                color: $white;
+                &:hover{
+                    color: $white;
+                }
+            }
+            &-modal{
+                color: $white;
+                &:hover{
+                    color: $white;
+                }
             }
         }
     }

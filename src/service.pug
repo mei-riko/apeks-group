@@ -1,0 +1,21 @@
+html(lang="ru")
+    include chunks/head.pug
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        main
+            .content.catalog-title
+                .container
+                    ul.breadcrumbs
+                        li.breadcrumbs__item
+                            a.breadcrumbs__link(href="#") Главная
+                        li.breadcrumbs__sep —
+                        li.breadcrumbs__item
+                            a.breadcrumbs__link(href="#") Каталог
+                        li.breadcrumbs__sep —
+                        li.breadcrumbs__item.active Объекты транспортной инфраструктуры
+                    h1.h1 Каталог проектов
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
+        script(src="./js/app.min.js")

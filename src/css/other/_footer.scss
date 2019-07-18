@@ -1,1 +1,96 @@
-.footer{}
+.footer{
+    background: $dark;
+
+    .footer__label{
+        color: #90979d;
+        font-size: 12px;
+    }
+    .footer__link{
+        color: $white;
+        font-size: 12px;
+    }
+    .footer__policy{
+        margin-top:2em;
+        color: #90979d;
+        font-size: 12px;
+        text-decoration: underline;
+        &:hover{
+            color: $white;
+            font-size: 12px;
+        }
+    }
+
+    &__logo{
+        max-width: 100%;
+        width: 180px;
+        height: 40px;
+        background: url("/img/logo.png") no-repeat left center / contain;
+
+        margin-top: 40px;
+    }
+
+    &__nav{
+        list-style: none;
+        margin: 50px 0 0;
+        padding: 0;
+
+        .footer__link{
+            text-transform: uppercase;
+        }
+
+        .footer__item + .footer__item{
+            margin-top: 6px;
+        }
+    }
+
+    &__contact{
+        list-style: none;
+        margin: 50px 0 0;
+        padding: 0;
+        .footer__contact__phone + .footer__contact__email{
+            margin-top: 6px;
+        }
+    }
+
+    &__search{
+        margin: 50px 0 0;
+        &__label{
+            text-transform: uppercase;
+            color: $white;
+        }
+        &__input{
+            background: inherit;
+            border: 1px solid #90979d;
+            padding: 6px;
+            width: 100%;
+            margin-top: 12px;
+            color: $white;
+            &:hover, &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    &__subline{
+        position: relative;
+        margin-top: 50px;
+        padding: 15px 0;
+        color: #5a5e61;
+        font-size: 12px;
+
+        &:before{
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: 1px;
+            background: #0d1013;
+        }
+        .footer__link{
+            color: #5a5e61;
+            text-decoration: underline;
+        }
+    }
+}

@@ -133,6 +133,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     //myMap.controls.add('smallZoomControl');
     // Добавляем метки на карту.
     myMap.geoObjects.add(myPlacemark1);
+    myMap.behaviors.disable('scrollZoom');
   }
 });
 

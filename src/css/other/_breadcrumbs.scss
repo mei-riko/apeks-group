@@ -1,0 +1,25 @@
+.breadcrumbs{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-size: 12px;
+
+    &__sep{
+        padding: 0 10px;
+    }
+    &__item{
+        &.active{
+            color: $grey;
+        }
+    }
+    &__link{
+        &:hover{
+            color: $green;
+        }
+    }
+}

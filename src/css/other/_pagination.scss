@@ -1,1 +1,27 @@
-.pagination{}
+.pagination{
+    padding: 30px 0;
+    &__list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    &__item{
+        margin-right: 20px;
+        &.active{
+            color: $green;
+        }
+    }
+    &__link{
+        color: $grey;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

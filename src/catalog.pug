@@ -1,0 +1,63 @@
+html(lang="ru")
+    include chunks/head.pug
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        main
+            .content.catalog-title
+                .container
+                    ul.breadcrumbs
+                        li.breadcrumbs__item
+                            a.breadcrumbs__link(href="#") Главная
+                        li.breadcrumbs__sep —
+                        li.breadcrumbs__item
+                            a.breadcrumbs__link(href="#") Каталог
+                        li.breadcrumbs__sep —
+                        li.breadcrumbs__item.active Объекты транспортной инфраструктуры
+                    h1.h1 Каталог проектов
+                    nav.catalog-nav
+                        a.catalog-nav__link(href="#") Все категории
+                        a.catalog-nav__link(href="#") Промышленное строительство
+                        a.catalog-nav__link.active(href="#") Объекты транспортной инфраструктуры
+                        a.catalog-nav__link(href="#") Общественные здания и сооружения
+                        a.catalog-nav__link(href="#") Объекты энергетики
+                        a.catalog-nav__link(href="#") Гражданское строительство
+                        a.catalog-nav__link(href="#") Метростроение
+                        a.catalog-nav__link(href="#") Объекты культурного наследия
+            .catalog
+                .container
+                    .catalog__project.row
+                        .col-lg-5.p-relative
+                            .catalog__project__label Транспортная инфраструктура
+                            img.img-fluid.catalog__project__image(src="/img/image-big-01.png")
+                        .col-lg-2
+                            img.img-fluid.catalog__project__image.catalog__project__image_small(src="/img/image-big-02.png")
+                            img.img-fluid.catalog__project__image.catalog__project__image_small(src="/img/image-big-02.png")
+                        .col-lg-5
+                            p.catalog__project__title Реконструкция автодороги А-121 к Константиновскому дворцу
+                            p.catalog__project__location г. Санкт-Петербург
+                            p.catalog__project__content Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором.
+                    .catalog__project.row
+                        .col-lg-5.p-relative
+                            .catalog__project__label Общественные здания и сооружения
+                            img.img-fluid.catalog__project__image(src="/img/image-big-02.png")
+                        .col-lg-2
+                            img.img-fluid.catalog__project__image.catalog__project__image_small(src="/img/image-big-01.png")
+                            img.img-fluid.catalog__project__image.catalog__project__image_small(src="/img/image-big-01.png")
+                        .col-lg-5
+                            p.catalog__project__title Реконструкция здания Федеральной Службы  Судебных Приставов
+                            p.catalog__project__location г. Москва
+                            p.catalog__project__content Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором.
+                            p.catalog__project__content Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором.
+            nav.pagination
+                .container
+                    ul.pagination__list
+                        li.pagination__item
+                            a.pagination__link(href="#") 01
+                        li.pagination__item.active 02
+                        li.pagination__item
+                            a.pagination__link(href="#") 03
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
+        script(src="./js/app.min.js")
