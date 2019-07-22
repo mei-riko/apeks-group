@@ -1,6 +1,9 @@
 .header{
-    padding: 60px 0;
     border-bottom:1px solid #e5e5e5;
+    .container_header{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
     &__logo{
         max-width: 100%;
         width: 280px;
@@ -40,6 +43,7 @@
             color: $dark;
             &:hover{
                 color: $green;
+                text-decoration: none;
             }
         }
         &-modal{
@@ -49,45 +53,70 @@
             color: $dark;
             border-bottom: 1px dotted;
             &:hover{
-                color: $dark;
+                color: $green;
                 text-decoration: none;
             }
         }
     }
-}
-
-.index{
-    .header_fixed{
+    // Index
+    &.header_index{
         position: absolute;
         width: 100%;
         top: 0;
         left: 0;
         z-index: 11;
         border-bottom: none;
-    }
-    .header{
-        &__logo{
+        .header__logo{
             background: url("/img/logo.png") no-repeat left center / contain;
         }
-        &__navbar-icon{
+        .header__navbar-icon{
             .path{fill:$white;}
         }
-        &__navbar-title{
+        .header__navbar-title{
             color: $white;
         }
-        &__contact{
+        .header__contact{
             &-phone{
                 color: $white;
                 &:hover{
-                    color: $white;
+                    color: $blue;
                 }
             }
             &-modal{
                 color: $white;
                 &:hover{
-                    color: $white;
+                    color: $blue;
                 }
             }
         }
     }
+    // Fixed
+    &.header_fixed{
+        opacity: 0;
+
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 11;
+
+        transform: translateY(-100%);
+        // transition: transform 0s, opacity .5s;
+
+        &.header_fixed--active{
+            opacity: 1;
+            background: $white;
+            transform: translateY(0);
+            transition: transform .5s, opacity 0s;
+
+            .container_header{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+main.padding-top{
+    padding-top: 200px;
 }

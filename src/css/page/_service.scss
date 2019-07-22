@@ -1,0 +1,56 @@
+.service-title{
+    padding-top: 30px;
+    .h1{
+        margin: 50px 0;
+    }
+    .scroll-down{
+        color: $dark;
+        opacity: .3;
+        &:hover{
+            opacity: .6;
+            text-decoration: none;
+            &:after{
+                transform: translateY(10px);
+            }
+        }
+        &:after{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 40px;
+            background: url("/img/test-down.png") no-repeat left center / contain;
+            transform: translateY(0px);
+            transition: .4s;
+
+            margin-top: 10px;
+        }
+    }
+}
+.service-info{
+    &__col{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 60px;
+        border-top: 1px solid #e5e5e5;
+
+        & > *{
+            width: 100%;
+        }
+    }
+    &__b-lg-right{
+        border-right: 1px solid #e5e5e5;
+    }
+
+    & + .section-maps{
+        border-top: 1px solid #e5e5e5;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg') ) {
+    &__b-lg-right{
+        border-right: none;
+    }
+}

@@ -1,5 +1,37 @@
 import $ from 'jquery'
 $(document).ready(() =>{
+  $("a.scroll").click(function() {
+    $("html, body").animate({
+       scrollTop: $($(this).attr("href")).offset().top + "px"
+    }, {
+       duration: 500,
+       easing: "swing"
+    });
+    return false;
+ });
+  /*
+		Customized layout Project
+  */
+  var option = {
+    baseClass: "fancybox-custom-layout",
+    infobar: false,
+    touch: {
+      vertical: false
+    },
+    buttons: ["close", "thumbs"],
+    animationEffect: "fade",
+    transitionEffect: "fade",
+    preventCaptionOverlap: false,
+    idleTime: false,
+    gutter: 0,
+    // Customize caption area
+    caption : function( instance, item ) {
+      return $(this).find('figcaption').html();
+    }
+  };
+
+  $('[data-fancybox="project-1"]').fancybox( option );
+
   // Services Demo
   $('.slider-for').slick({
     slidesToShow: 1,
@@ -26,6 +58,55 @@ $(document).ready(() =>{
         let item = $(this).data("item") - 1;
         console.log(item);
         $(".slider-item[data-slick-index=" + item + "]").click()
+    }
+  });
+  // Open Nav
+  $(".header .header__navbar-toggler").on("click", function(){
+    $("nav.navbar").slideToggle();
+  });
+  
+  // Fixed Nav
+  if( $('body').hasClass('index') ){
+    $('.header').addClass('header_index');
+  }
+
+  if( $("body").scrollTop() > 400 ){
+    if( $('body').hasClass('index') ){
+      $('.header').removeClass('header_index');
+    }
+
+    $('.header').addClass('header_fixed');
+    $('.header_fixed').addClass('header_fixed--active');
+
+    $('main').addClass('padding-top');
+  }
+
+  $(window).scroll(function(){
+    $("nav.navbar").slideUp();
+
+    var scroll=$(document).scrollTop();
+    if( scroll>200 ){
+      $('.header').addClass('header_fixed');
+      if( !$('body').hasClass('index') ){
+        $('main').addClass('padding-top');
+      }
+    }
+    else{
+      $('.header').removeClass('header_fixed');
+      $('main').removeClass('padding-top');
+    }
+    
+    if( scroll>400 ){
+      if( $('body').hasClass('index') ){
+        $('.header').removeClass('header_index');
+      }
+      $('.header_fixed').addClass('header_fixed--active');
+    }
+    else{
+      if( $('body').hasClass('index') ){
+        $('.header').addClass('header_index');
+      }
+      $('.header_fixed').removeClass('header_fixed--active');
     }
   });
 

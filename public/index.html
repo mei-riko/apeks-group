@@ -7,17 +7,16 @@
     <title>apeks-group</title>
     <link href="./css/slick.css" rel="stylesheet"/>
     <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body class="index">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <header class="header header_fixed">
-      <div class="container">
+    <header class="header">
+      <div class="container container_header">
         <div class="row align-items-center">
-          <div class="col-xl-5">
-            <div class="header__logo"></div>
-          </div>
+          <div class="col-xl-5"><a class="header__logo" href="/"></a></div>
           <div class="col-xl-2 d-flex justify-content-center">
             <div class="header__navbar-toggler"><span class="header__navbar-title">МЕНЮ</span>
               <svg class="header__navbar-icon" width="32px" height="20px">
@@ -26,19 +25,22 @@
             </div>
           </div>
           <div class="col-xl-5">
-            <div class="header__contact"><a class="header__contact-phone" href="tel:88006665544">8 (800) 666-55-44</a><a class="header__contact-modal" href="#">Связаться с менеджером компании</a></div>
+            <div class="header__contact"><a class="header__contact-phone" href="tel:88006665544">8 (800) 666-55-44</a></div>
+            <div class="header__contact"><a class="header__contact-modal" href="#">Связаться с менеджером</a></div>
           </div>
         </div>
       </div>
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link">Тест 1</a></li>
+            <li class="navbar-item"><a class="navbar-link">Тест 2</a></li>
+            <li class="navbar-item"><a class="navbar-link">Тест 3</a></li>
+            <li class="navbar-item"><a class="navbar-link">Тест 4</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <nav class="navbar d-none">
-      <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-link">Тест 1</a></li>
-        <li class="navbar-item"><a class="navbar-link">Тест 2</a></li>
-        <li class="navbar-item"><a class="navbar-link">Тест 3</a></li>
-        <li class="navbar-item"><a class="navbar-link">Тест 4</a></li>
-      </ul>
-    </nav>
     <main>
       <header class="section-main">
         <div class="container">
@@ -225,7 +227,13 @@
           <div class="row">
             <div class="col-md-4">
               <div class="project__item">
-                <div class="project__image"><a class="project__link" href="#">+</a><img class="img-fluid" src="/img/portfolio-01.png"/></div>
+                <div class="project__image"><a class="project__link" href="/img/portfolio-01.png" data-fancybox="project-1" data-thumb="/img/portfolio-01.png">+
+                    <figcaption class="project-1 d-none">
+                      <p class="theme">Транспортная инфраструктура</p>
+                      <p class="title">Реконструкция автодороги А-121 к Константиновскому дворцу</p>
+                      <p class="location">г. Санкт-Петербург</p>
+                      <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или невозможных слов.") +</p>
+                    </figcaption></a><img class="img-fluid" src="/img/portfolio-01.png"/></div>
                 <p class="project__theme">Транспортная инфраструктура</p>
                 <p class="project__title">Реконструкция автодороги А-121 к Константиновскому дворцу</p>
                 <p class="project__location">г. Санкт-Петербург</p>
@@ -233,7 +241,13 @@
             </div>
             <div class="col-md-4">
               <div class="project__item">
-                <div class="project__image"><a class="project__link" href="#">+</a><img class="img-fluid" src="/img/portfolio-02.png"/></div>
+                <div class="project__image"><a class="project__link" href="/img/portfolio-02.png" data-fancybox="project-1" data-thumb="/img/portfolio-02.png">+
+                    <figcaption class="d-none">
+                      <p class="theme">Промышленное строительство</p>
+                      <p class="title">Комплекс гидрокрекинга</p>
+                      <p class="location">г. Кириши</p>
+                      <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или невозможных слов.") +                                            </p>
+                    </figcaption></a><img class="img-fluid" src="/img/portfolio-02.png"/></div>
                 <p class="project__theme">Промышленное строительство</p>
                 <p class="project__title">Комплекс гидрокрекинга</p>
                 <p class="project__location">г. Кириши</p>
@@ -241,7 +255,13 @@
             </div>
             <div class="col-md-4">
               <div class="project__item">
-                <div class="project__image"><a class="project__link" href="#">+</a><img class="img-fluid" src="/img/portfolio-03.png"/></div>
+                <div class="project__image"><a class="project__link" href="/img/portfolio-03.png" data-fancybox="project-1" data-thumb="/img/portfolio-03.png">+
+                    <figcaption class="d-none">
+                      <p class="theme">Общественные здания и&nbsp;сооружения</p>
+                      <p class="title">Реконструкция здания Федеральной Службы Судебных Приставов</p>
+                      <p class="location">г. Москва</p>
+                      <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или невозможных слов.")</p>
+                    </figcaption></a><img class="img-fluid" src="/img/portfolio-03.png"/></div>
                 <p class="project__theme">Общественные здания и&nbsp;сооружения</p>
                 <p class="project__title">Реконструкция здания Федеральной Службы Судебных Приставов</p>
                 <p class="project__location">г. Москва</p>
@@ -290,6 +310,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=9101629a-d644-4cc4-aa18-4032c120fc8e&amp;lang=ru_RU"></script>
     <script src="./js/jquery.inputmask.js"></script>
     <script src="./js/slick.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

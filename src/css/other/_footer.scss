@@ -53,7 +53,9 @@
     }
 
     &__search{
+        position: relative;
         margin: 50px 0 0;
+
         &__label{
             text-transform: uppercase;
             color: $white;
@@ -68,6 +70,21 @@
             &:hover, &:focus{
                 outline: none;
             }
+        }
+        &:after{
+            content:'';
+            display: block;
+            cursor: pointer;
+
+            height: 30px;
+            width: 30px;
+
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+
+            background: url("/img/search_w.svg") no-repeat center / 18px;
+            
         }
     }
 

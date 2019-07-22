@@ -43,3 +43,101 @@
         }
     }
 }
+
+/* Customized layout */
+
+.fancybox-custom-layout{
+    .fancybox-caption{
+        .theme{
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        .title{
+            font-weight: 700;
+        }
+        .location{
+            font-size: 12px;
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'lg') ) {
+    .fancybox-custom-layout{
+        /* Change color for backdrop */
+        .fancybox-bg {
+            background: #fcfaf9;
+        }
+        
+        &.fancybox-is-open .fancybox-bg {
+            opacity: 1;
+        }
+        .fancybox-caption {
+            background: #eeeeee;
+            bottom: 0;
+            color: #6c6f73;
+            left: auto;
+            padding: 30px 40px;
+            right: 44px;
+            top: 0;
+            width: 456px;
+    
+            text-align: left;
+    
+            &__body{
+                max-height: 100vh;
+            }
+        }
+        /* Remove gradient from caption*/
+        .fancybox-caption::before {
+            display: none;
+        }
+        /* Adjust content area position */
+        .fancybox-stage {
+            right: 500px;
+        }
+        /* Align buttons at the right side  */
+        .fancybox-toolbar {
+            background: linear-gradient( 90deg, #2e6e3e 0%, #329d49 100%);
+            bottom: 0;
+            left: auto;
+            right: 0;
+            top: 0;
+            width: 44px;
+            .fancybox-button svg path{
+                fill: $white;
+            }
+        }
+        /* Active Slide Color */
+        .fancybox-thumbs__list a:before {
+            border-color: $dark-green;
+        }
+        /* Reposition right arrow */
+        .fancybox-button--arrow_right {
+            right: 508px;
+        }
+        /* Remove background from all buttons */
+        .fancybox-button {
+            background: transparent;
+        }
+        /* Navigation arrows */
+        .fancybox-navigation{
+            .fancybox-button div {
+                padding: 6px;
+                background: #fcfaf9;
+                border-radius: 50%;
+                transition: opacity .2s;
+                box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+                opacity: .7;
+            }
+            .fancybox-button:not([disabled]):hover div {
+                opacity: 1;
+            }
+            .fancybox-button[disabled] {
+                color: #999;
+            }
+            .fancybox-button:not([disabled]) {
+                color: #333;
+            }
+        }
+    }
+}

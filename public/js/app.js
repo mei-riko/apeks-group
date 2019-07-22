@@ -77,6 +77,38 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _jquery2.default)(document).ready(function () {
+  (0, _jquery2.default)("a.scroll").click(function () {
+    (0, _jquery2.default)("html, body").animate({
+      scrollTop: (0, _jquery2.default)((0, _jquery2.default)(this).attr("href")).offset().top + "px"
+    }, {
+      duration: 500,
+      easing: "swing"
+    });
+    return false;
+  });
+  /*
+  Customized layout Project
+  */
+  var option = {
+    baseClass: "fancybox-custom-layout",
+    infobar: false,
+    touch: {
+      vertical: false
+    },
+    buttons: ["close", "thumbs"],
+    animationEffect: "fade",
+    transitionEffect: "fade",
+    preventCaptionOverlap: false,
+    idleTime: false,
+    gutter: 0,
+    // Customize caption area
+    caption: function caption(instance, item) {
+      return (0, _jquery2.default)(this).find('figcaption').html();
+    }
+  };
+
+  (0, _jquery2.default)('[data-fancybox="project-1"]').fancybox(option);
+
   // Services Demo
   (0, _jquery2.default)('.slider-for').slick({
     slidesToShow: 1,
@@ -103,6 +135,53 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       var item = (0, _jquery2.default)(this).data("item") - 1;
       console.log(item);
       (0, _jquery2.default)(".slider-item[data-slick-index=" + item + "]").click();
+    }
+  });
+  // Open Nav
+  (0, _jquery2.default)(".header .header__navbar-toggler").on("click", function () {
+    (0, _jquery2.default)("nav.navbar").slideToggle();
+  });
+
+  // Fixed Nav
+  if ((0, _jquery2.default)('body').hasClass('index')) {
+    (0, _jquery2.default)('.header').addClass('header_index');
+  }
+
+  if ((0, _jquery2.default)("body").scrollTop() > 400) {
+    if ((0, _jquery2.default)('body').hasClass('index')) {
+      (0, _jquery2.default)('.header').removeClass('header_index');
+    }
+
+    (0, _jquery2.default)('.header').addClass('header_fixed');
+    (0, _jquery2.default)('.header_fixed').addClass('header_fixed--active');
+
+    (0, _jquery2.default)('main').addClass('padding-top');
+  }
+
+  (0, _jquery2.default)(window).scroll(function () {
+    (0, _jquery2.default)("nav.navbar").slideUp();
+
+    var scroll = (0, _jquery2.default)(document).scrollTop();
+    if (scroll > 200) {
+      (0, _jquery2.default)('.header').addClass('header_fixed');
+      if (!(0, _jquery2.default)('body').hasClass('index')) {
+        (0, _jquery2.default)('main').addClass('padding-top');
+      }
+    } else {
+      (0, _jquery2.default)('.header').removeClass('header_fixed');
+      (0, _jquery2.default)('main').removeClass('padding-top');
+    }
+
+    if (scroll > 400) {
+      if ((0, _jquery2.default)('body').hasClass('index')) {
+        (0, _jquery2.default)('.header').removeClass('header_index');
+      }
+      (0, _jquery2.default)('.header_fixed').addClass('header_fixed--active');
+    } else {
+      if ((0, _jquery2.default)('body').hasClass('index')) {
+        (0, _jquery2.default)('.header').addClass('header_index');
+      }
+      (0, _jquery2.default)('.header_fixed').removeClass('header_fixed--active');
     }
   });
 
