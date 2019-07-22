@@ -62,6 +62,9 @@ $(document).ready(() =>{
   });
   // Open Nav
   $(".header .header__navbar-toggler").on("click", function(){
+    if( !$('.header').hasClass('header_fixed') ){
+      $('body,html').animate({scrollTop: 0}, 400); 
+    }
     $("nav.navbar").slideToggle();
   });
   
@@ -82,8 +85,9 @@ $(document).ready(() =>{
   }
 
   $(window).scroll(function(){
-    $("nav.navbar").slideUp();
-
+    if( $('.header').hasClass('header_fixed') ){
+      $("nav.navbar").slideUp();
+    }
     var scroll=$(document).scrollTop();
     if( scroll>200 ){
       $('.header').addClass('header_fixed');

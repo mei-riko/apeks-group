@@ -139,6 +139,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   // Open Nav
   (0, _jquery2.default)(".header .header__navbar-toggler").on("click", function () {
+    if (!(0, _jquery2.default)('.header').hasClass('header_fixed')) {
+      (0, _jquery2.default)('body,html').animate({ scrollTop: 0 }, 400);
+    }
     (0, _jquery2.default)("nav.navbar").slideToggle();
   });
 
@@ -159,8 +162,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   }
 
   (0, _jquery2.default)(window).scroll(function () {
-    (0, _jquery2.default)("nav.navbar").slideUp();
-
+    if ((0, _jquery2.default)('.header').hasClass('header_fixed')) {
+      (0, _jquery2.default)("nav.navbar").slideUp();
+    }
     var scroll = (0, _jquery2.default)(document).scrollTop();
     if (scroll > 200) {
       (0, _jquery2.default)('.header').addClass('header_fixed');
