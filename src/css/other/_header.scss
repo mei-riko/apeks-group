@@ -71,21 +71,27 @@
         }
         .header__navbar-icon{
             .path{fill:$white;}
+            
         }
         .header__navbar-title{
             color: $white;
+        }
+        .header__navbar-toggler{
+            &:hover{
+                .path{fill:$green2;}
+            }
         }
         .header__contact{
             &-phone{
                 color: $white;
                 &:hover{
-                    color: $blue;
+                    color: $green2;
                 }
             }
             &-modal{
                 color: $white;
                 &:hover{
-                    color: $blue;
+                    color: $green2;
                 }
             }
         }

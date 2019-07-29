@@ -1,6 +1,17 @@
 .content{
     position: relative;
-    padding: 60px 0;
+    padding: 140px 0;
+
+    .row + .row{
+        margin-top: 140px;
+    }
+
+    & + .content{
+        padding-top: 0px;
+    }
+    & + .project{
+        padding-top: 0px;
+    }
 }
 .subheading{
     position: relative;
@@ -8,7 +19,11 @@
     font-weight: 900;
     text-transform: uppercase;
 
-    margin-bottom: 45px;
+    margin-bottom: 60px;
+
+    & + .offer{
+        margin-top: -30px;
+    }
 
     &:after{
         position: absolute;
@@ -23,11 +38,25 @@
         background: rgba(35, 136, 24, 0.2);
         transform: translateY(-10px);
     }
+
+    &-color{
+        font-size: 1.25rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $green;
+    }
 }
 .heading{
-    font-size: 3rem;
-    font-weight: 300;
-    line-height: 1.2em;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.3em;
 
-    margin-bottom: 45px;
+    margin-bottom: 60px;
+
+    &.text-bold{
+        font-weight: 600;
+    }
+    &.mb-0{
+        margin-bottom: 0;
+    }
 }

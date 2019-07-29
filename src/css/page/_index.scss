@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     
-    padding: 200px 0 0;
+    padding: 220px 0 0;
     
     background: url("/img/bg-image-demo.jpg") no-repeat center / cover;
     color: $white;
@@ -24,6 +24,7 @@
     // Text
     .heading{
         margin-bottom: 0;
+        padding-left: 74px;
     }
     .offer{
         font-size: 1rem;
@@ -56,7 +57,7 @@
                 top: 0;
                 left: 0;
     
-                background: $green;
+                background: $green2;
                 opacity: 0;
     
                 transition: .3s;
@@ -72,8 +73,12 @@
             text-transform: uppercase;
             color: $white;
             padding: 2rem;
-            width: 210px;
+            width: 240px;
             max-width: 100%;
+
+            position: relative;
+            z-index: 11;
+
         }
     }
 }

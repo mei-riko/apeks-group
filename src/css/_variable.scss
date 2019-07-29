@@ -1,8 +1,9 @@
 $white:                     #ffffff;
 $black:                     #000000;
-$green:                     #27ba46;
-$blue:                      #a148ff;
+$green:                     #7ab317;
+$green2:                    #A0C55F;
 $dark-green:                #2a4b37;
+$light-green:               #d3e7d0;
 $dark:                      #1c2023;
 $grey:                      #a0a0a0;
 
@@ -26,13 +27,13 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1100px
+  xl: 1200px
 ) !default;
 
 $body-color:                #343434;
 $body-bg:                   #fff;
 
-$font-family-base:            "Montserrat", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base:            "Source Sans Pro", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 

@@ -1,9 +1,16 @@
 .content_licences{
-
+    .offer{
+        width: 820px;
+        max-width: 100%;
+        & + .licences{
+            margin-top: 60px;
+        }
+    }
 }
 .licences{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     margin-left: -20px;
     margin-right: -20px;

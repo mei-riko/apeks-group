@@ -3,20 +3,21 @@
 
     .footer__label{
         color: #90979d;
-        font-size: 12px;
+        font-size: 14px;
+        display: block;
     }
     .footer__link{
         color: $white;
-        font-size: 12px;
+        font-size: 14px;
     }
     .footer__policy{
         margin-top:2em;
         color: #90979d;
-        font-size: 12px;
+        font-size: 14px;
         text-decoration: underline;
         &:hover{
             color: $white;
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
@@ -57,7 +58,7 @@
         margin: 50px 0 0;
 
         &__label{
-            text-transform: uppercase;
+            // text-transform: uppercase;
             color: $white;
         }
         &__input{
@@ -65,7 +66,7 @@
             border: 1px solid #90979d;
             padding: 6px;
             width: 100%;
-            margin-top: 12px;
+            margin-top: 14px;
             color: $white;
             &:hover, &:focus{
                 outline: none;
@@ -93,7 +94,7 @@
         margin-top: 50px;
         padding: 15px 0;
         color: #5a5e61;
-        font-size: 12px;
+        font-size: 14px;
 
         &:before{
             content:'';
