@@ -9,18 +9,23 @@
 }
 .licences{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
 
     margin-left: -20px;
     margin-right: -20px;
+    margin-bottom: -20px;
+
     .licences__item{
-        flex: 0 0 18%;
-        max-width: 18%;
+        flex: 0 0 50%;
+        max-width: 50%;
 
         padding: 0 20px;
         height: auto;
 
+        margin-bottom: 20px;
         &:hover, &:focus, &:active{
             outline: none;
         }
@@ -35,25 +40,60 @@
             .licences__image{
                 width: 100%;
             }
-            .licences__title,
-            .licences__subtitle{
-                // display: block;
-            }
         }
     }
     .licences__image{
+        border: 1px solid #e5e5e5;
         transition: .5s;
     }
     .licences__title{
-        display: none;
-        padding-left: 20px;
-        font-size: 2rem;
         font-weight: 700;
     }
     .licences__subtitle{
-        display: none;
-        padding-left: 20px;
         font-size: 12px;
         margin-top: .5em;
+    }
+}
+
+.slider{
+    margin-left: -20px;
+    margin-right: -20px;
+    .slider__item{
+        padding: 0 20px;
+    }
+    .slick-slide:focus{
+        outline:none
+    }
+    .slick-dots {
+        bottom:-40px;
+        li{
+            button{
+                display:block;
+                &:before {
+                    font-family: inherit;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'md') ) {
+    .licences{
+        .licences__item{
+            flex: 0 0 calc(100%/3);
+            max-width: calc(100%/3);    
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg') ) {
+    .licences{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 0px;
+        .licences__item{
+            flex: 0 0 16%;
+            max-width: 16%;    
+            margin-bottom: 0px;
+        }
     }
 }

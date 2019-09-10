@@ -32,7 +32,7 @@
 
     &__nav{
         list-style: none;
-        margin: 50px 0 0;
+        margin: 30px 0 0;
         padding: 0;
 
         .footer__link{
@@ -46,7 +46,7 @@
 
     &__contact{
         list-style: none;
-        margin: 50px 0 0;
+        margin: 30px 0 0;
         padding: 0;
         .footer__contact__phone + .footer__contact__email{
             margin-top: 6px;
@@ -55,7 +55,7 @@
 
     &__search{
         position: relative;
-        margin: 50px 0 0;
+        margin: 30px 0 0;
 
         &__label{
             // text-transform: uppercase;
@@ -91,7 +91,7 @@
 
     &__subline{
         position: relative;
-        margin-top: 50px;
+        margin-top: 30px;
         padding: 15px 0;
         color: #5a5e61;
         font-size: 14px;
@@ -109,6 +109,23 @@
         .footer__link{
             color: #5a5e61;
             text-decoration: underline;
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'md') ) {
+    .footer{
+        &__nav{
+            margin-top: 50px;
+        }
+        &__contact{
+            margin-top: 50px;
+        }
+        &__search{
+            margin-top: 50px;
+        }
+        &__subline{
+            margin-top: 50px;
         }
     }
 }

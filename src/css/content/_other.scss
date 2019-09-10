@@ -1,9 +1,9 @@
 .content{
     position: relative;
-    padding: 140px 0;
+    padding: 60px 0;
 
     .row + .row{
-        margin-top: 140px;
+        margin-top: 60px;
     }
 
     & + .content{
@@ -19,7 +19,7 @@
     font-weight: 900;
     text-transform: uppercase;
 
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     & + .offer{
         margin-top: -30px;
@@ -47,16 +47,56 @@
     }
 }
 .heading{
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     font-weight: 400;
-    line-height: 1.3em;
+    line-height: 1.1;
 
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 
     &.text-bold{
         font-weight: 600;
     }
     &.mb-0{
         margin-bottom: 0;
+    }
+    .heading__info{
+        display:block;
+        font-size:16px;
+        line-height:1.2;
+        text-transform:uppercase;
+        letter-spacing:2px;
+        margin-bottom:30px;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'md') ) {
+    .content{
+        padding: 80px 0;
+        .row + .row{
+            margin-top: 80px;
+        }
+    }
+    .heading{
+        font-size: 2.25rem;
+        .heading__info{
+            font-size:20px;
+            margin-bottom:60px;
+        }
+    }  
+    .subheading{
+        margin-bottom: 60px;
+    }  
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg') ) {
+    .content{
+        padding: 100px 0;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl') ) {
+    .content{
+        padding: 140px 0;
+        .row + .row{
+            margin-top: 140px;
+        }
     }
 }

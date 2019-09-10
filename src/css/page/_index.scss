@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     
-    padding: 220px 0 0;
+    padding: 140px 0 0;
     
     background: url("/img/bg-image-demo.jpg") no-repeat center / cover;
     color: $white;
@@ -23,8 +23,8 @@
 
     // Text
     .heading{
-        margin-bottom: 0;
-        padding-left: 74px;
+        margin-bottom: 30px;
+        padding-left: 0;
     }
     .offer{
         font-size: 1rem;
@@ -32,21 +32,26 @@
     }
     // Inside Containers
     .container_services{
-        margin-top: 100px;
+        margin-top: 60px;
     }
     // Inside Blocks
     &__services{
         display: flex;
+        flex-wrap: wrap;
+
         padding: 0;
         margin-right: -160px;
-    
         &__item{
             position: relative;
             display: flex;
             align-items: flex-end;
-            width: calc(100%/3);
-            min-height: 250px;
-    
+            flex: 0 0 100%;
+            max-width: 100%;
+            min-height: 120px;
+
+            background-size: cover;
+            background-position: center;
+
             &:before{
                 content:'';
                 display: block;
@@ -73,12 +78,11 @@
             text-transform: uppercase;
             color: $white;
             padding: 2rem;
-            width: 240px;
+            z-index: 11;
             max-width: 100%;
 
             position: relative;
             z-index: 11;
-
         }
     }
 }
@@ -93,7 +97,70 @@
         /* Chrome 19+ & Safari 6+ */
     }
 }
-
+@media all and (min-width: map-get($grid-breakpoints, 'sm') ) {
+    .section-main{
+        .container_services{
+            margin-left: 0px;
+            max-width: 100%;
+        }
+        // Inside Blocks
+        &__services{
+            flex-wrap: nowrap;
+            margin: 0;
+            &__item{
+                flex: 0 0 calc(100%/3);
+                max-width: calc(100%/3);
+            }
+            &__title{
+                padding: 2rem 1rem;
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'md') ) {
+    .section-main{
+        padding: 180px 0 0;
+        // Inside Containers
+        .container_services{
+            margin-top: 100px;
+        }
+        // Inside Blocks
+        &__services{
+            flex-wrap: nowrap;
+            &__item{
+                flex: 0 0 calc(100%/3);
+                max-width: calc(100%/3);
+                min-height: 250px;
+            }
+            &__title{
+                width: 240px;
+                padding: 2rem;
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg') ) {
+    .section-main{
+        padding: 220px 0 0;
+        .container_services{
+            margin-left: auto;
+            max-width: 960px;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl') ) {
+    .section-main{
+        // Text
+        .heading{
+            margin-bottom: 0;
+            padding-left: 74px;
+        }
+        .container_services{
+            margin-left: auto;
+            max-width: 1200px;
+        }
+    }
+}
 @media all and (max-width: 1600px ){
     .section-main{
         &__services{

@@ -36,7 +36,9 @@
             padding-right: 70px;
         }
         .project__title{
+            font-size: 1.25rem;
             font-weight: 700;
+            line-height: 1.2;
         }
         .project__location{
             font-size: 12px;
@@ -61,7 +63,12 @@
     }
 }
 
-@media all and (min-width: map-get($grid-breakpoints, 'lg') ) {
+@media all and (min-width: map-get($grid-breakpoints, 'md') ) {
+    .project{
+        .project__title{
+            font-size: 1rem;
+        }
+    }
     .fancybox-custom-layout{
         /* Change color for backdrop */
         .fancybox-bg {

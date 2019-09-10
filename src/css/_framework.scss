@@ -72,6 +72,10 @@ small,
 }
 .img-bnw{
     filter: grayscale(100%);
+    transition: .3s;
+    &:hover{
+        filter: grayscale(0%);
+    }
 }
 
 .slider-nav{
@@ -81,9 +85,21 @@ small,
     height: auto;
 }
 
+.mt-0{margin-top: 0px;}
+.mt-30{margin-top: 30px;}
+.mt-60{margin-top: 60px;}
+.mb-0{margin-bottom: 0px;}
+.mb-30{margin-bottom: 30px;}
+.mb-60{margin-bottom: 60px;}
 
 
+@media all and (min-width: map-get($grid-breakpoints, 'md') ) {
+    .mt-md-0{margin-top: 0px;}
+    .mb-md-0{margin-bottom: 0px;}
+}
 @media all and (min-width: map-get($grid-breakpoints, 'lg') ) {
+    .mt-lg-0{margin-top: 0px;}
+    .mb-lg-0{margin-bottom: 0px;}
     .text-lg-left{text-align: left;}
     .text-lg-center{text-align: center;}
     .text-lg-right{text-align: right;}
